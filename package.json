@@ -1,0 +1,28 @@
+{
+  "name": "home-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hettfield/home-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hettfield/home-task/issues"
+  },
+  "homepage": "https://github.com/hettfield/home-task#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2",
+    "supertest": "^6.3.0"
+  }
+}
