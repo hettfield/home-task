@@ -1,2 +1,2 @@
-# homework
-Node.js (university labs)
+to start the project:
+node app.js
