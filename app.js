@@ -4,6 +4,19 @@ const Schema = mongoose.Schema;
 const app = express();
 const jsonParser = express.json();
 
+const {
+    MONGO_DB_HOSTNAME,
+    MONGO_DB_PORT,
+    MONGO_DB
+} = process.env
+
+const options = {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+}
+
+const url = `mongodb://${MONGO_DB_HOSTNAME}:${MONGO_DB_PORT}/${MONGO_DB}`;
+
 const productScheme = new Schema(
     {
         name: String,
@@ -17,7 +30,7 @@ const Product = mongoose.model("Product", productScheme);
 
 app.use(express.static(__dirname + "/public"));
 
-mongoose.connect("mongodb://localhost:27017/productsdb", { useUnifiedTopology: true, useNewUrlParser: true }, function (err) {
+mongoose.connect(url, options, function (err) {
     if (err) return console.log(err);
     app.listen(3000, function () {
         console.log("The server is waiting for a connection...");
