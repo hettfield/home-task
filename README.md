@@ -1,1 +1,2 @@
-# home-task
+# homework
+Node.js (university labs)
